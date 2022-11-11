@@ -1,0 +1,47 @@
+{
+  "expo": {
+    "name": "BeEnter",
+    "slug": "BeEnter",
+    "primaryColor": "#fe8022",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./app/assets/favicon.png",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff",
+      "image": "./app/assets/beenter.png"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./app/assets/adaptive-icon.png",
+        "backgroundColor": "#FFFFFF"
+      },
+      "package": "com.Events.BeEnter",
+      "versionCode":2
+
+    },
+    "web": {
+      "favicon": "./app/assets/favicon.png"
+    },
+    "description": "",
+    "plugins": [
+      [
+        "expo-notifications",
+        {
+          "icon": "./app/assets/beenter.png",
+          "color": "#ffffff"
+        }
+      ]
+    ]
+  }
+}
