@@ -57,7 +57,7 @@ export default function RegisterScreen() {
     }
   };
   const sendData = async (data) => {
-    const res = await axios.post("https://benterapi.herokuapp.com/auth", data);
+    const res = await axios.post("https://enterapi.herokuapp.com/auth", data);
     // storeData(data);
     console.log(res.status, res.data, res.data.message);
     setMessage(res.data.message);

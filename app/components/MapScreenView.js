@@ -65,7 +65,7 @@ const Map = ({ regions, style }) => {
 
   const fetchCategory = async (id) => {
     const response = await axios.get(
-      `https://benterapi.herokuapp.com/api/category/${id}`
+      `https://enterapi.herokuapp.com/api/category/${id}`
     );
     setCategory(response.data[0].name);
     setCategoryLoading(false);
@@ -171,7 +171,7 @@ const Map = ({ regions, style }) => {
         <BottomSheetView style={{ paddingHorizontal: wp(5) }}>
           <Image
             style={{ width: "100%", height: hp(27), borderRadius: 5 }}
-            source={{ uri: `https://benterapi.herokuapp.com/images/${img1}` }}
+            source={{ uri: `https://enterapi.herokuapp.com/images/${img1}` }}
           />
           <TextField heading={"Title"} text={title} />
           <TextField heading={"Description"} text={description} />
@@ -184,15 +184,15 @@ const Map = ({ regions, style }) => {
                   title,
                   address,
                   images: [
-                    img1 && `https://benterapi.herokuapp.com/images/${img1}`,
+                    img1 && `https://enterapi.herokuapp.com/images/${img1}`,
 
-                    img2 && `https://benterapi.herokuapp.com/images/${img2}`,
+                    img2 && `https://enterapi.herokuapp.com/images/${img2}`,
 
-                    img3 && `https://benterapi.herokuapp.com/images/${img3}`,
+                    img3 && `https://enterapi.herokuapp.com/images/${img3}`,
 
-                    img4 && `https://benterapi.herokuapp.com/images/${img4}`,
+                    img4 && `https://enterapi.herokuapp.com/images/${img4}`,
 
-                    img5 && `https://benterapi.herokuapp.com/images/${img5}`,
+                    img5 && `https://enterapi.herokuapp.com/images/${img5}`,
                   ],
                   venue,
                   location,

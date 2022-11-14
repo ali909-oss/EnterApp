@@ -26,9 +26,14 @@
         "foregroundImage": "./app/assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
       },
-      "package": "com.Events.BeEnter",
-      "versionCode":2
 
+      "package": "com.Events.BeEnter",
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyC37uy9l_xX40P8Dlo4ZOaFNoX8lfcgEos"
+        }
+      },
+      "versionCode": 2
     },
     "web": {
       "favicon": "./app/assets/favicon.png"

@@ -53,6 +53,7 @@ export default function ListItemViewScreen({
   const getData = async () => {
     try {
       const jsonValue = await AsyncStorage.getItem("geolocation");
+      console.log(jsonValue, "json")
       setUserLocation(jsonValue != null ? JSON.parse(jsonValue) : null);
 
       setVal(true);
@@ -61,6 +62,9 @@ export default function ListItemViewScreen({
     }
   };
   const getDistance = async () => {
+
+
+    console.log(userLocation, "location")
     const response = await axios.get(
       `https://trueway-matrix.p.rapidapi.com/CalculateDrivingMatrix?origins=${userLocation.latitude},${userLocation.longitude}&destinations=${location.latitude},${location.longitude}`,
       {
@@ -73,6 +77,7 @@ export default function ListItemViewScreen({
       }
     );
     if (response) {
+      console.log(response.data, "data")
       setDistance(response.data.distances[0][0]);
     }
   };

@@ -34,7 +34,7 @@ export default function ApproveScreen({
   const acceptTimeChange = async (orderId) => {
     console.log(orderId);
     const response = await axios.put(
-      `https://benterapi.herokuapp.com/api/booking/changetime/confirm/${orderId}`,
+      `https://enterapi.herokuapp.com/api/booking/changetime/confirm/${orderId}`,
       { status: 1 }
       // {
       //   headers: {
@@ -52,7 +52,7 @@ export default function ApproveScreen({
   };
   const rejectTimeChange = async (orderId) => {
     const response = await axios.put(
-      `https://benterapi.herokuapp.com/api/booking/changetime/confirm/${orderId}`,
+      `https://enterapi.herokuapp.com/api/booking/changetime/confirm/${orderId}`,
       { status: 2 }
       // {
       //   headers: {

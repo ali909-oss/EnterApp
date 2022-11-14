@@ -55,31 +55,13 @@ export default function InnerHome({
     }
   };
 
-  // const getDistance = async (lat1, long1, lat2, long2) => {
-  //   const response = await axios.get(
-  //     `https://trueway-matrix.p.rapidapi.com/CalculateDrivingMatrix?origins=${lat1},${long1}&destinations=${lat2},${long2}`,
-  //     {
-  //       headers: {
-  //         "Content-Type": "application/json",
-  //         "X-RapidAPI-Key":
-  //           "0cb61e2826msh031b587a300f448p12ff88jsna372dc1d4dbb",
-  //         "X-RapidAPI-Host": "trueway-matrix.p.rapidapi.com",
-  //       },
-  //     }
-  //   );
-  //   console.log("the Response", response);
-  //   setLoading(false);
-  //   if (response) {
-  //     setDistance(response.data.distances[0][0]);
-  //     setDuration(response.data.durations[0][0]);
-  //   }
-  // };
+ 
   const wait = (timeout) => {
     return new Promise((resolve) => setTimeout(resolve, timeout));
   };
   const fetchData = async () => {
     const response = await axios.get(
-      `https://benterapi.herokuapp.com/api/events/category/${id}`
+      `https://enterapi.herokuapp.com/api/events/category/${id}`
     );
     // setArr(response.data);
     setFiteredArr(response.data);
@@ -240,7 +222,7 @@ export default function InnerHome({
                           item.img1
                             ? {
                                 uri:
-                                  "https://benterapi.herokuapp.com/images/" +
+                                  "https://enterapi.herokuapp.com/images/" +
                                   item.img1,
                               }
                             : require("../assets/images/sport.jpg")
@@ -255,19 +237,19 @@ export default function InnerHome({
                             address: item.address,
                             images: [
                               item.img1 &&
-                                `https://benterapi.herokuapp.com/images/${item.img1}`,
+                                `https://enterapi.herokuapp.com/images/${item.img1}`,
 
                               item.img2 &&
-                                `https://benterapi.herokuapp.com/images/${item.img2}`,
+                                `https://enterapi.herokuapp.com/images/${item.img2}`,
 
                               item.img3 &&
-                                `https://benterapi.herokuapp.com/images/${item.img3}`,
+                                `https://enterapi.herokuapp.com/images/${item.img3}`,
 
                               item.img4 &&
-                                `https://benterapi.herokuapp.com/images/${item.img4}`,
+                                `https://enterapi.herokuapp.com/images/${item.img4}`,
 
                               item.img5 &&
-                                `https://benterapi.herokuapp.com/images/${item.img5}`,
+                                `https://enterapi.herokuapp.com/images/${item.img5}`,
                             ],
                             venue: item.venue,
                             location: item.location,

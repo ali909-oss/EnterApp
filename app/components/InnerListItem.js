@@ -21,7 +21,7 @@ import {
   Montserrat_600SemiBold,
   Montserrat_700Bold,
 } from "@expo-google-fonts/montserrat";
-import { NativeBaseProvider, Modal } from "native-base";
+
 export default function InnerListItem({
   image = require("../assets/jacket.jpg"),
   title,
@@ -32,7 +32,6 @@ export default function InnerListItem({
 }) {
   const navigation = useNavigation();
   return (
-    <NativeBaseProvider>
       <TouchableOpacity style={styles.container} onPress={onPress}>
         <>
           {image && <Image style={styles.img} source={image} />}
@@ -62,7 +61,6 @@ export default function InnerListItem({
           </TouchableNativeFeedback>
         </>
       </TouchableOpacity>
-    </NativeBaseProvider>
   );
 }
 const styles = StyleSheet.create({

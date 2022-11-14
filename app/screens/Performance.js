@@ -40,7 +40,7 @@ export default function Performance({ navigation }) {
 
   const fetchData = async () => {
     const response = await axios.get(
-      `https://benterapi.herokuapp.com/api/booking/Id/${userId}`
+      `https://enterapi.herokuapp.com/api/booking/Id/${userId}`
     );
     setData(response.data);
     console.log(response.data);
@@ -48,7 +48,7 @@ export default function Performance({ navigation }) {
   };
   const updateBooking = async (id, seats) => {
     const response = await axios.put(
-      `https://benterapi.herokuapp.com/api/booking/update/user/${id}`,
+      `https://enterapi.herokuapp.com/api/booking/update/user/${id}`,
       { seats: seats }
     );
     // setUpdateLoading(false);
@@ -61,7 +61,7 @@ export default function Performance({ navigation }) {
   };
   const deleteBooking = async (id) => {
     const response = await axios.delete(
-      `https://benterapi.herokuapp.com/api/booking/delete/${id}`
+      `https://enterapi.herokuapp.com/api/booking/delete/${id}`
     );
     setDeleteMessage(response.data.message);
     console.log(response.data.message);

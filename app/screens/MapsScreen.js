@@ -26,7 +26,7 @@ const MapsScreen = ({ navigation }) => {
   const [categories, setCategories] = useState([]);
   const fetchData = async () => {
     const response = await axios.get(
-      "https://benterapi.herokuapp.com/api/events"
+      "https://enterapi.herokuapp.com/api/events"
     );
     setArr(response.data);
     setNewArr(response.data);
@@ -37,7 +37,7 @@ const MapsScreen = ({ navigation }) => {
   };
 
   const fetchLegends = async () => {
-    const res = await axios.get(`https://benterapi.herokuapp.com/api/category`);
+    const res = await axios.get(`https://enterapi.herokuapp.com/api/category`);
     console.log("This is the response", res.data);
 
     setCategories(res.data);

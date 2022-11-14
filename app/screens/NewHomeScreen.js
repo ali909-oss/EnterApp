@@ -36,7 +36,7 @@ export default function NewHomeScreen({ navigation }) {
   };
 
   const fetchData = async () => {
-    const res = await axios.get(`https://benterapi.herokuapp.com/api/category`);
+    const res = await axios.get(`https://enterapi.herokuapp.com/api/category`);
     console.log("This is the response", res.data);
     setListingArr(res.data);
     console.log(res.data);
@@ -174,7 +174,7 @@ export default function NewHomeScreen({ navigation }) {
                               style={styles.card}
                               source={{
                                 uri:
-                                  "https://benterapi.herokuapp.com/images/" +
+                                  "https://enterapi.herokuapp.com/images/" +
                                   item.main_image,
                               }}
                             />

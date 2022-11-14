@@ -31,7 +31,7 @@ export default function ForgetPassword({ navigation: { goBack } }) {
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState("");
   const sendData = async (data) => {
-    const res = await axios.post("https://benterapi.herokuapp.com/api/reset", {
+    const res = await axios.post("https://enterapi.herokuapp.com/api/reset", {
       email_id: data,
     });
     setMessage(res.data.message);

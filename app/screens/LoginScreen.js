@@ -93,7 +93,7 @@ export default function LoginScreen() {
   };
   const sendExpoToken = async (id, token) => {
     const response = await axios.post(
-      "https://benterapi.herokuapp.com/api/device",
+      "https://enterapi.herokuapp.com/api/device",
       {
         user_id: id,
         device_id: token,
@@ -109,7 +109,7 @@ export default function LoginScreen() {
 
   const fetchData = async (data) => {
     const res = await axios.post(
-      "https://benterapi.herokuapp.com/auth/login",
+      "https://enterapi.herokuapp.com/auth/login",
       data
     );
     console.log(res.data);

@@ -88,7 +88,7 @@ export default function AdmintData({ navigation, route }) {
     };
     console.log(order);
     const response = await axios.post(
-      `https://benterapi.herokuapp.com/api/booking`,
+      `https://enterapi.herokuapp.com/api/booking`,
       order
     );
     console.log(response.data.message);
@@ -120,7 +120,7 @@ export default function AdmintData({ navigation, route }) {
     };
     console.log(order);
     const response = await axios.post(
-      `https://benterapi.herokuapp.com/api/booking`,
+      `https://enterapi.herokuapp.com/api/booking`,
       order
     );
     console.log(response.data.message);

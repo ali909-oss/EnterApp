@@ -35,7 +35,7 @@ export default function ProfileScreen({ navigation }) {
 
   const deleteExpoToken = async (token) => {
     const response = await axios.delete(
-      `https://benterapi.herokuapp.com/api/device/delete/${token}`
+      `https://enterapi.herokuapp.com/api/device/delete/${token}`
     );
     console.log("Expo Token", response.data);
     console.log("Expo Token222", token);
